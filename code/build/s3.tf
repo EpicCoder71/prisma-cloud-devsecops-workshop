@@ -6,7 +6,9 @@ resource "aws_s3_bucket" "dev_s3" {
   bucket_prefix = "dev-"
 
   tags = {
-    Environment      = "Dev"
+    Environment = "Dev"
+    yor_name    = "dev_s3"
+    yor_trace   = "7a123ff3-87dc-4d61-bb62-7599fa22fe07"
   }
 }
 
@@ -16,4 +18,4 @@ resource "aws_s3_bucket_ownership_controls" "dev_s3" {
     object_ownership = "BucketOwnerPreferred"
   }
 }
- 
+
